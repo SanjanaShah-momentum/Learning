@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hex Code</title>
+	<h1 align="center">Random hex code generator</h1>
+	<h3 align="center">With changing background color</h3>
+</head>
+<body>
+	<div align="center">
+		<button id="btn" onclick="myFunction()">#FFFFFF</button>
+	</div>
+<script type="text/javascript">
+	
+    document.getElementById("btn").addEventListener("click", myFunction);
+ 	function myFunction() {
+ 	let letters = "0123456789ABCDEF"; 
+	let color = '#'; 
+	for (let i = 0; i < 6; i++) 
+    	color += letters[(Math.floor(Math.random() * 16))]; 
+   		document.body.style.background = color;
+   		var btn = document.getElementById("btn");
+		btn.innerHTML = color;
+ }
+</script>
+</body>
+</html>
